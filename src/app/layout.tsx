@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ThemeRegistry from "../utils/ThemeRegistry";
+import ScopedCssBaseline from "@mui/material/ScopedCssBaseline";
+import { Container } from "@mui/material";
+import AppBarMain from "@/components/appBar/AppBarMain";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ThemeRegistry>
+        <body suppressHydrationWarning={true} className={inter.className}>
+          <ScopedCssBaseline>
+            <Container maxWidth="xl" className="p_cancel" sx={{minHeight:"100vh",width:"100%",px:0}}>
+              <AppBarMain />
+              {children}
+            </Container>
+          </ScopedCssBaseline>
+        </body>
+      </ThemeRegistry>
     </html>
   );
 }

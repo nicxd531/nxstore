@@ -1,4 +1,28 @@
-@tailwind base;
+/* reset css */
+html,
+body,
+p,
+a,
+ul,
+li,
+h1,
+h2,
+h3 {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: inherit!important ;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  text-decoration: none !important;
+}
+.p_cancel{
+  padding: 0 !important;
+  
+}
+
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -30,4 +54,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
