@@ -1,0 +1,62 @@
+[
+    {
+        "image":"/images/blue shirt rec1.png",
+        "price":10.50,
+        "description":"T-shirts with multiple colors, for men"
+
+    },
+    {
+        "image":"/images/jeanShort rec1.png",
+        "price":10.30,
+        "description":"Jeans shorts for menblue color"
+
+    },
+    {
+        "image":"/images/brown jacket rec1.png",
+        "price":12.50,
+        "description":"Brown winter coatmedium size"
+
+    },
+    {
+        "image":"/images/blue jean bag rec1.png",
+        "price":34,
+        "description":"Jeans bag for travelfor men"
+
+    },
+    {
+        "image":"/images/blue wallet rec1.png",
+        "price":99,
+        "description":"Leather wallet"
+
+    },
+    {
+        "image":"/images/camera cat2.png",
+        "price":9.99,
+        "description":"Canon camera black, 100x zoom"
+
+    },
+    {
+        "image":"/images/headset rec1.png",
+        "price":8.99,
+        "description":"Headset for gamingwith mic"
+
+    },
+    {
+        "image":"/images/blue coat rec1.png",
+        "price":10.30,
+        "description":"blue work coat coatmedium size"
+
+    },
+    {
+        "image":"/images/clay pot rec 1.png",
+        "price":10.50,
+        "description":"decorative clay pot "
+
+    },
+    {
+        "image":"/images/plantsCat1.png",
+        "price":16.50,
+        "description":"decorative plant"
+
+    }
+]

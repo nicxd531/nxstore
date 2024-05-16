@@ -1,0 +1,43 @@
+[
+    {
+      "title": "Smart watches",
+      "statingPrice": 19,
+      "image": "/images/smartWatch cat1.png"
+    },
+    {
+      "title": "Cameras",
+      "statingPrice": 89,
+      "image": "/images/camera cat2.png"
+    },
+    {
+      "title": "Headphones",
+      "statingPrice": 10,
+      "image": "/images/headset cat2.png"
+    },
+    {
+      "title": "mobile phones",
+      "statingPrice": 240,
+      "image": "/images/mobilephones cat2.png"
+    },
+    {
+      "title": "Gaming set",
+      "statingPrice": 35,
+      "image": "/images/gameset cat2.png"
+    },
+    {
+      "title": "Laptops & PC",
+      "statingPrice": 340,
+      "image": "/images/laptop cat2.png"
+    },
+    {
+      "title": "Smartphones",
+      "statingPrice": 19,
+      "image": "/images/smartphones cat2.png"
+    },
+    {
+      "title": "Electric kattle",
+      "statingPrice": 30,
+      "image": "/images/kettle cat2.png"
+    }
+  ]
+  

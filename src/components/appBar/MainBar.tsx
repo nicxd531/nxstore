@@ -10,6 +10,8 @@ import TemporaryDrawer from "./TemporaryDrawer";
 import Link from "next/link";
 import IconsBar from "./IconsBar";
 import AvatarIcon from "./AvatarIcon";
+import SearchBarLg from "./search/SearchBarLg";
+import SearchBarXs from "./search/SearchBarXs";
 
 export default function MainBar() {
   const [open, setOpen] = React.useState(false);
@@ -23,9 +25,9 @@ export default function MainBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
-        sx={{ boxShadow: 0, borderBottom: "1px solid #bab5b5", px: { lg: 8 } }}
+        sx={{ boxShadow: 0, borderBottom: {lg:"1px solid #bab5b5"}, px: { lg: 8 } }}
       >
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: {lg:"space-between"} }}>
           <IconButton
             size="large"
             edge="start"
@@ -36,12 +38,18 @@ export default function MainBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link href="/">Nxnews</Link>
+          <Typography variant="h6" component="div" sx={{mr:{xs:"auto",lg:0},height:{xs:"30px",lg:"40px"}}}>
+            <Link href="/">
+              <img alt="store loge" src="/images/logo-colored.png" style={{width:"100%",height:"100%"}} />
+            </Link>
           </Typography>
-          <IconsBar />
-          <AvatarIcon />
+          <SearchBarLg />
+          <Box sx={{display:"flex"}}>
+            <IconsBar />
+            <AvatarIcon />
+          </Box>
         </Toolbar>
+        <SearchBarXs/>
       </AppBar>
       <TemporaryDrawer toggleDrawer={toggleDrawer} open={open} />
     </Box>

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Soft chairs",
+    "statingPrice": 19,
+    "image": "/images/Soft chairs cat1.png"
+  },
+  {
+    "title": "Sofa & chair",
+    "statingPrice": 57,
+    "image": "/images/sofas and chairs cat 1.png"
+  },
+  {
+    "title": "chairs",
+    "statingPrice": 27,
+    "image": "/images/chair cat1.png"
+  },
+  {
+    "title": "pottery",
+    "statingPrice": 32,
+    "image": "/images/pottery cat 1.png"
+  },
+  {
+    "title": "Kitchen mixer",
+    "statingPrice": 7,
+    "image": "/images/kitchen mixer cat1.png"
+  },
+  {
+    "title": "Blenders",
+    "statingPrice": 50,
+    "image": "/images/blenders cat1.png"
+  },
+  {
+    "title": "Home appliance",
+    "statingPrice": 19,
+    "image": "/images/home appliances cat 1.png"
+  },
+  {
+    "title": "plants",
+    "statingPrice": 30,
+    "image": "/images/plantsCat1.png"
+  }
+]

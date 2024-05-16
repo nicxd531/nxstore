@@ -21,6 +21,9 @@ h3 {
   padding: 0 !important;
   
 }
+body{
+  background-color:"E5F1FF" ;
+}
 
 /* @tailwind base;
 @tailwind components;
@@ -55,3 +58,56 @@ body {
     text-wrap: balance;
   }
 } */
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 5px; /* Roundness of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+    border-radius: 5px; /* Roundness of the scrollbar track */
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+    background: #f1f1f1; /* Color of the scrollbar track on hover */
+}
+
+/* flipo */
+
+.flip-clock {
+  --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+  --fcc-spacing: 2px; /* space between unit times and separators */
+  --fcc-digit-block-width: 20px; /* width of digit card */
+  --fcc-digit-block-height: 30px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-block-radius: 5px; /* border radius of digit card */
+  --fcc-digit-block-spacing: 2px; /* Space between blocks in each unit of time. */
+  --fcc-digit-font-size: 1rem; /* font size of digit */
+  --fcc-digit-color: white; /* color of digit */
+  --fcc-label-font-size: 12px; /* font size of label */
+  --fcc-label-color: black; /* color of label */
+  --fcc-background:#606060; /* background of digit card */
+  --fcc-divider-color: #606060; /* color of divider */
+  --fcc-divider-height: 1px; /* height of divider */
+  --fcc-separator-size: 2px; /* size of colon */
+  --fcc-separator-color: black; /* color of colon */
+}
+/*================== homepage ==============================*/
+.scroll-container {
+  width: 300px; /* Set the width of the container */
+  white-space: nowrap; /* Prevent items from wrapping */
+  overflow-x: auto; /* Enable horizontal scroll */
+}
+.scroll-bar::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+.bg-transparent1{
+  background-color: #c4c4c421;
+}

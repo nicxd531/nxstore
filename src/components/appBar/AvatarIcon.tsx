@@ -15,9 +15,7 @@ function AvatarIcon() {
   interface event {
     event: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   }
-  const handleMenu = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
+  const handleMenu = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
@@ -25,19 +23,21 @@ function AvatarIcon() {
   };
   return (
     <div>
-      <IconButton
-        size="large"
-        aria-label="account of current user"
-        aria-controls="menu-appbar"
-        aria-haspopup="true"
-        onClick={handleMenu}
-        sx={{ display: "flex", flexDirection: "column" }}
-      >
-        <Avatar sx={{ width: 24, height: 24 }} />
+      <Box>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="menu-appbar"
+          aria-haspopup="true"
+          onClick={handleMenu}
+          sx={{ display: "flex", flexDirection: "column",p:1 }}
+        >
+          <Avatar sx={{ width: 23, height: 23 }} />
+        </IconButton>
         <Typography sx={{ display: { xs: "none", lg: "block" } }}>
           Profile
         </Typography>
-      </IconButton>
+      </Box>
       <Menu
         id="menu-appbar"
         anchorEl={anchorEl}

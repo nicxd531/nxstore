@@ -1,7 +1,7 @@
 import {create} from "zustand"
 
 const sendTheme = create((set)=>({
-    selectedTheme:"dark",
+    selectedTheme:"light",
     selectTheme:(selectedTheme)=>set({selectedTheme})
 }))
 

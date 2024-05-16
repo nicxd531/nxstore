@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Smart watches",
+    "image": "/images/image 35.png",
+    "discount": 25
+  },
+  {
+    "title": "Laptops",
+    "image": "/images/image 34.png",
+    "discount": 15
+  },
+  {
+    "title": "GoPro cameras",
+    "image": "/images/camera.png",
+    "discount": 40
+  },
+  {
+    "title": "Headphones",
+    "image": "/images/headset.png",
+    "discount": 25
+  },
+  {
+    "title": "Canon camreras",
+    "image": "/images/phone.png",
+    "discount": 35
+  }
+]
