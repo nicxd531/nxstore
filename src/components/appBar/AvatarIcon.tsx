@@ -30,7 +30,7 @@ function AvatarIcon() {
           aria-controls="menu-appbar"
           aria-haspopup="true"
           onClick={handleMenu}
-          sx={{ display: "flex", flexDirection: "column",p:1 }}
+          sx={{ display: "flex", flexDirection: "column",padding :"5px"}}
         >
           <Avatar sx={{ width: 23, height: 23 }} />
         </IconButton>

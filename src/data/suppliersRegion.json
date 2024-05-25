@@ -1,0 +1,52 @@
+[
+  {
+    "image": "/images/Ae.png",
+    "name": "Arabic Emirates",
+    "address": "shopname.ae"
+  },
+  {
+    "image": "/images/AU@2x.png",
+    "name": "Australia",
+    "address": "shopname.ae"
+  },
+  {
+    "image": "/images/US.png",
+    "name": "United States",
+    "address": "shopname.ae"
+  },
+  {
+    "image": "/images/RU@2x.png",
+    "name": "Russia",
+    "address": "shopname.ru"
+  },
+  {
+    "image": "/images/italy.png",
+    "name": "Italy",
+    "address": "shopname.it"
+  },
+  {
+    "image": "/images/DK@2x.png",
+    "name": "Denmark",
+    "address": "denmark.com.dk"
+  },
+  {
+    "image": "/images/FR.png",
+    "name": "France",
+    "address": "shopname.com.fr"
+  },
+  {
+    "image": "/images/AE.png",
+    "name": "Arabic Emirates",
+    "address": "shopname.ae"
+  },
+  {
+    "image": "/images/CN@2x.png",
+    "name": "China",
+    "address": "shopname.ae"
+  },
+  {
+    "image": "/images/UK.png",
+    "name": "Great Britain",
+    "address": "shopname.co.uk"
+  }
+]

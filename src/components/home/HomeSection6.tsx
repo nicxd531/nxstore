@@ -43,6 +43,7 @@ function HomeSection6() {
               key={index}
             >
               <IconButton
+                component="div"
                 sx={{
                   borderRadius: 0,
                   width: "100%",
@@ -50,7 +51,7 @@ function HomeSection6() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
-                  color: selectedTheme== "light"? "black":"white",
+                  color: selectedTheme == "light" ? "black" : "white",
                 }}
               >
                 <Box sx={{ height: "60%" }}>
@@ -75,7 +76,7 @@ function HomeSection6() {
                   ${data.price}
                 </Typography>
                 <IconButton sx={{ borderRadius: 0 }}>
-                  <Typography sx={{ textAlign: "start", fontSize: "1rem" }}>
+                  <Typography sx={{ textAlign: "start", fontSize: {xs:"1rem",lg:"1.2rem"} }}>
                     {data.description}
                   </Typography>
                 </IconButton>

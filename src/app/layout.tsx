@@ -5,6 +5,7 @@ import ThemeRegistry from "../utils/ThemeRegistry";
 import ScopedCssBaseline from "@mui/material/ScopedCssBaseline";
 import { Container } from "@mui/material";
 import AppBarMain from "@/components/appBar/AppBarMain";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
             <Container maxWidth="xl" className="p_cancel" sx={{width:"100%",px:0,height:"100%"}}>
               <AppBarMain />
               {children}
+              <Footer/>
             </Container>
           </ScopedCssBaseline>
         </body>

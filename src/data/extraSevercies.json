@@ -1,0 +1,22 @@
+[
+    {
+        "image":"/images/extra cat 1.png",
+        "info":"Source from  Industry Hubs",
+        "icon":"search"
+    },
+    {
+        "image":"/images/extra cat 2.png",
+        "info":"Customize Your Products",
+        "icon":"order"
+    },
+    {
+        "image":"/images/extra cat 3.png",
+        "info":"Fast, reliable shipping by ocean or air",
+        "icon":"send"
+    },
+    {
+        "image":"/images/extra cat 4.png",
+        "info":"Product monitoring  and inspection",
+        "icon":"shield"
+    }
+]
