@@ -1,4 +1,3 @@
-import React from "react";
 import { createTheme } from "@mui/material";
 import sendTheme from "../zustand/sendTheme"
 
@@ -6,7 +5,7 @@ function getTheme() {
     const {selectedTheme}=sendTheme()
   const theme = createTheme({
     typography: {
-      fontFamily: "Roboto", // Change to your desired font family
+      fontFamily:"Roboto Slab", // Change to your desired font family
     },
     palette: {
       primary: { 

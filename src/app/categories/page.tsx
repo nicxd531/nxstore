@@ -20,9 +20,8 @@ function Categories() {
   return (
     <Box
       sx={{
-        width: "100%",
-        minHeight: "100vh",
-        
+        width: { xs: "100%", lg: "87%" },
+        mx: { lg: 10 }
       }}
     >
       <Box sx={{display :"flex",flexDirection:"row",width:"100%",flexWrap:"wrap"}}>
@@ -30,7 +29,7 @@ function Categories() {
           return (
             <IconButton
               key={index}
-              sx={{width:"20%",height:"150px"}}
+              sx={{width:{xs:"48%",lg:"20%"},height:"150px",borderRadius:0}}
             >
               <Link href={data.link} style={{width:"100%",height:'100%'}}>
                 <Paper

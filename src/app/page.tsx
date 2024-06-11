@@ -7,7 +7,6 @@ import HomeSection5 from "@/components/home/HomeSection5";
 import HomeSection6 from "@/components/home/HomeSection6";
 import HomeSection7 from "@/components/home/HomeSection7";
 import HomeSection8 from "@/components/home/HomeSection8";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -15,7 +14,7 @@ export default function Home() {
  
   
   return (
-    <main className="h-100" >
+    <main  >
         <HomeSection1 />
         <HomeSection2/>
         <HomeSection3/>

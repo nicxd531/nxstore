@@ -1,4 +1,6 @@
 /* reset css */
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 html,
 body,
 p,
@@ -24,7 +26,9 @@ h3 {
 body{
   background-color:"E5F1FF" ;
 }
-
+.text-line-through{
+  text-decoration: line-through !important;
+}
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,10 +1,19 @@
+"use client"
 import React from "react";
 import { Box, Paper } from '@mui/material'
-
+import Panel from "../../../components/categories/panel/Panel";
+import CatMainWin from "@/components/categories/Main/CatMainWin";
 function page() {
   return (
-    <Box>
-      <Paper sx={{ height: "50vw", width: "50vw" ,mx:"auto",my:2}}>computer and tech</Paper>
+    <Box
+      sx={{
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+      }}
+    >
+      <Panel />
+      <CatMainWin catName={"Computer And Tech"}/>
     </Box>
   );
 }

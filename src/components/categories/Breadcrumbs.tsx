@@ -17,13 +17,16 @@ function Breadcrumb() {
       sx={{
         width: "100%",
         height: "64px",
-        display: "flex",
+        display: {xs:"none",lg:"flex"},
         alignItems: "center",
+        ml: { xs: 1, lg: 0 },
+        fontSize: { lg: "1.3rem" },
       }}
     >
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="medium" />}
         aria-label="breadcrumb"
+        sx={{ fontSize: { lg: "1.2rem" } }}
       >
         <Link key="1" color="inherit" href="/">
           Home
@@ -33,17 +36,25 @@ function Breadcrumb() {
 
           if (index === pathArray.length - 1) {
             return (
-              <Typography key={fullPath} color="textPrimary">
+              <Typography
+                sx={{ fontSize: { lg: "1.2rem" } }}
+                key={fullPath}
+                color="textPrimary"
+              >
                 {path}
               </Typography>
             );
           } else {
             return (
-              <Link key={fullPath} href={fullPath} passHref>
-                <Box component="a" sx={{ textTransform: "capitalize" }}>
+              <Box
+                component="div"
+                key={fullPath}
+                sx={{ textTransform: "capitalize" }}
+              >
+                <Link href={fullPath} passHref>
                   {path}
-                </Box>
-              </Link>
+                </Link>
+              </Box>
             );
           }
         })}

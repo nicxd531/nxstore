@@ -1,10 +1,13 @@
 import Breadcrumb from '@/components/categories/Breadcrumbs';
 import { Box } from '@mui/material';
-import React from 'react'
+import React,{useEffect} from 'react'
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function CategoriesLayout({children}: Readonly<{
     children: React.ReactNode;
   }>) {
+    
   return (
     <Box
     sx={{

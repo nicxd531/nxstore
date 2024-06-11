@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import sendTheme from "../../zustand/sendTheme";
 import Link from "next/link";
 import LoadingPage from "../Loaders/LoadingPage";
+import NextNProgress from 'nextjs-progressbar';
 
 function AppBar2lg() {
   const { selectedTheme } = sendTheme();
@@ -90,7 +91,7 @@ function AppBar2lg() {
           </Form.Select>
         </Box>
       </Paper>
-      <LoadingPage />
+      <NextNProgress />
     </>
   );
 }

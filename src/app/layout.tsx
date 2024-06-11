@@ -6,6 +6,7 @@ import ScopedCssBaseline from "@mui/material/ScopedCssBaseline";
 import { Container } from "@mui/material";
 import AppBarMain from "@/components/appBar/AppBarMain";
 import Footer from "@/components/footer/Footer";
+import NextTopLoader from 'nextjs-toploader'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <ThemeRegistry>
         <body suppressHydrationWarning={true} className={inter.className} >
           <ScopedCssBaseline>
-            <Container maxWidth="xl" className="p_cancel" sx={{width:"100%",px:0,height:"100%"}}>
+            <Container maxWidth="xl" className="p_cancel" sx={{width:"100%",px:0}}>
               <AppBarMain />
+              <NextTopLoader />
               {children}
               <Footer/>
             </Container>
