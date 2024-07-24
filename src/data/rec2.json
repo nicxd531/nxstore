@@ -1,0 +1,45 @@
+[
+    
+    {
+        "image":"/images/blue shirt rec1.png",
+        "price":10.50,
+        "description":"T-shirts with multiple colors, for men",
+        "priceRange":"$32.00-$40.00"
+
+    },
+    {
+        "image":"/images/jeanShort rec1.png",
+        "price":10.30,
+        "description":"Jeans shorts for menblue color",
+        "priceRange":"$32.00-$40.00"
+
+    },
+    {
+        "image":"/images/brown jacket rec1.png",
+        "price":12.50,
+        "description":"Brown winter coatmedium size",
+        "priceRange":"$32.00-$40.00"
+
+    },
+    {
+        "image":"/images/blue jean bag rec1.png",
+        "price":34,
+        "description":"Jeans bag for travelfor men",
+        "priceRange":"$32.00-$40.00"
+
+    },
+    {
+        "image":"/images/blue wallet rec1.png",
+        "price":99,
+        "description":"Leather wallet",
+        "priceRange":"$32.00-$40.00"
+
+    },
+    {
+        "image":"/images/camera cat2.png",
+        "price":9.99,
+        "description":"Canon camera black, 100x zoom",
+        "priceRange":"$32.00-$40.00"
+
+    }
+]

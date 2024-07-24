@@ -8,7 +8,7 @@ interface myComponent {
 }
 function page({ params }: myComponent) {
   return (
-    <Box>
+    <Box sx={{px:{xs:1,lg:0}}}>
       <MainPage pData={params} />
     </Box>
   );

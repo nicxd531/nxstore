@@ -19,7 +19,7 @@ interface myComponentProps {
 function ImageSlider({ data }: myComponentProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <Box sx={{ width: { xs:"100%",lg: "33%" } }}>
+    <Box sx={{ width: { xs:"100%",lg: "32%" } }}>
       <Swiper
         style={{
           border: "2px solid #DEE2E7",

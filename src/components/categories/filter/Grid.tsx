@@ -8,9 +8,12 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Form from "react-bootstrap/Form";
 import toggleGrid from "../../../zustand/toggleGrid";
+import sendTheme from "@/zustand/sendTheme";
+
 
 function Grid() {
   const { selectedGrid, selectGrid } = toggleGrid();
+  const {selectedTheme}=sendTheme()
   return (
     <Box
       sx={{
@@ -55,7 +58,7 @@ function Grid() {
             onClick={() => selectGrid("grid")}
             sx={{
               p: 1,
-              color: "black",
+              color: selectedTheme == "light" ? "black" : "white",
               bgcolor: selectedGrid == "grid" ? "#DEE2E7" : "transparent",
               borderTopRightRadius: "0px",
               borderBottomRightRadius: "0px",
@@ -75,7 +78,7 @@ function Grid() {
             onClick={() => selectGrid("list")}
             sx={{
               p: 1,
-              color: "black",
+              color: selectedTheme == "light" && selectedGrid == "list" ? "black" : "white",
               bgcolor: selectedGrid == "list" ? "#DEE2E7" : "transparent",
               borderTopRightRadius: "8px",
               borderBottomRightRadius: "8px",

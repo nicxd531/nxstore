@@ -5,7 +5,7 @@ function getTheme() {
     const {selectedTheme}=sendTheme()
   const theme = createTheme({
     typography: {
-      fontFamily:"Roboto Slab", // Change to your desired font family
+      fontFamily:"Inter", // Change to your desired font family
     },
     palette: {
       primary: { 

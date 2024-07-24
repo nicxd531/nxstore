@@ -1,5 +1,5 @@
-import { Box, Pagination, Stack } from '@mui/material'
 import React from 'react'
+import {Stack } from '@mui/material'
 import CatAppBar from '../CatAppBar'
 import MainWindow from './MainWindow'
 import data from "../../../data/AllData.json"

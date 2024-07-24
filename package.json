@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.5",
     "@leenguyen/react-flip-clock-countdown": "^1.5.2",
     "@mui/icons-material": "^5.15.15",
+    "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.18",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@mui/x-tree-view": "^7.5.1",

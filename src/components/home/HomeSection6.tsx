@@ -75,11 +75,19 @@ function HomeSection6() {
                 >
                   ${data.price}
                 </Typography>
-                <IconButton sx={{ borderRadius: 0 }}>
-                  <Typography sx={{ textAlign: "start", fontSize: {xs:"1rem",lg:"1.2rem"} }}>
+                <Box
+                  className={`${selectedTheme == "light" && "text-muted"}`}
+                  sx={{ borderRadius: 0 }}
+                >
+                  <Typography
+                    sx={{
+                      textAlign: "start",
+                      fontSize: { xs: "1rem", lg: "1.1rem" },
+                    }}
+                  >
                     {data.description}
                   </Typography>
-                </IconButton>
+                </Box>
               </IconButton>
             </Paper>
           );

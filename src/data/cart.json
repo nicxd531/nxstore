@@ -1,0 +1,52 @@
+[
+    {
+        "name":"T-shirts with multiple colors, for men and lady",
+        "image":"images/blue shirt rec1.png",
+        "Size": "medium",
+         "Color": "blue",  
+        "Material": "Plastic",
+        "Seller":" Artel Market",
+        "quantity":6,
+        "price":78.99
+    },
+    {
+        "name":"T-shirts with multiple colors, for men and lady",
+        "image":"images/blue shirt rec1.png",
+        "Size": "medium",
+         "Color": "blue",  
+        "Material": "Plastic",
+        "Seller":" Artel Market",
+        "quantity":6,
+        "price":78.99
+    },
+    {
+        "name":"T-shirts with multiple colors, for men and lady",
+        "image":"images/blue shirt rec1.png",
+        "Size": "medium",
+         "Color": "blue",  
+        "Material": "Plastic",
+        "Seller":" Artel Market",
+        "quantity":6,
+        "price":78.99
+    },
+    {
+        "name":"T-shirts with multiple colors, for men and lady",
+        "image":"images/blue shirt rec1.png",
+        "Size": "medium",
+         "Color": "blue",  
+        "Material": "Plastic",
+        "Seller":" Artel Market",
+        "quantity":6,
+        "price":78.99
+    },
+    {
+        "name":"T-shirts with multiple colors, for men and lady",
+        "image":"images/blue shirt rec1.png",
+        "Size": "medium",
+         "Color": "blue",  
+        "Material": "Plastic",
+        "Seller":" Artel Market",
+        "quantity":6,
+        "price":78.99
+    }
+]

@@ -13,8 +13,10 @@ import "./HeightTransition.css";
 import Divider from "@mui/material/Divider";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
+import sendTheme from "@/zustand/sendTheme";
 
 function PriceRange() {
+  const {selectedTheme}=sendTheme()
   const [inProp, setInProp] = React.useState(true);
   const [value, setValue] = React.useState<number[]>([20, 500]);
   function valuetext(value: number) {
@@ -33,7 +35,7 @@ function PriceRange() {
           onClick={() => setInProp(!inProp)}
           sx={{
             borderRadius: 0,
-            color: "black",
+            color: selectedTheme == "light" ? "black" : "white",
             display: "flex",
             justifyContent: "space-between",
             width: "100%",

@@ -28,7 +28,7 @@ export default function PaginationBottom({
       direction="row"
       justifyContent={{ xs: "center", lg: "flex-end" }}
       spacing={2}
-      sx={{ width: "100%" }}
+      sx={{ width: "100%",mt:2 }}
     >
       <Box  sx={{ width: { xs: "30%", lg: "18%" } }}>
         <Form.Select

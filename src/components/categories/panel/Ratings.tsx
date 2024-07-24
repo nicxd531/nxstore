@@ -11,8 +11,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Checkbox from "@mui/material/Checkbox";
+import sendTheme from "@/zustand/sendTheme";
 
 function Ratings() {
+  const { selectedTheme } = sendTheme();
   const [inProp, setInProp] = React.useState(true);
 
   return (
@@ -23,7 +25,7 @@ function Ratings() {
           onClick={() => setInProp(!inProp)}
           sx={{
             borderRadius: 0,
-            color: "black",
+            color: selectedTheme == "light" ? "black" : "white",
             display: "flex",
             justifyContent: "space-between",
             width: "100%",

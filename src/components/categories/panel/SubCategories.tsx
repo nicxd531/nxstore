@@ -8,12 +8,15 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { CSSTransition } from "react-transition-group";
 import "./HeightTransition.css";
 import Divider from "@mui/material/Divider";
+import sendTheme from "@/zustand/sendTheme";
+
 
 interface MyComponentProps {
   optionalStringArray?: string[];
 }
 
 function SubCategories({ optionalStringArray }: MyComponentProps) {
+  const {selectedTheme}=sendTheme()
   const [inProp, setInProp] = React.useState(true);
 
   return (
@@ -24,10 +27,10 @@ function SubCategories({ optionalStringArray }: MyComponentProps) {
           onClick={() => setInProp(!inProp)}
           sx={{
             borderRadius: 0,
-            color: "black",
             display: "flex",
             justifyContent: "space-between",
             width: "100%",
+            color: selectedTheme == "light" ? "black" : "white",
           }}
         >
           <Typography sx={{ fontWeight: "bold", fontSize: "1.3rem" }}>

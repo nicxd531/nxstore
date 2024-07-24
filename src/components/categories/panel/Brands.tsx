@@ -9,6 +9,7 @@ import { CSSTransition } from "react-transition-group";
 import "./HeightTransition.css";
 import Divider from "@mui/material/Divider";
 import selectedBrands from "@/zustand/filter/selectedBrands";
+import sendTheme from "@/zustand/sendTheme";
 
 
 interface MyComponentProps {
@@ -16,6 +17,7 @@ interface MyComponentProps {
 }
 
 function Brands({ optionalStringArray }: MyComponentProps) {
+  const {selectedTheme}=sendTheme()
   const {selectedBrandsD,selectBrands}=selectedBrands()
   const [inProp, setInProp] = React.useState(true);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,10 +34,10 @@ function Brands({ optionalStringArray }: MyComponentProps) {
           onClick={() => setInProp(!inProp)}
           sx={{
             borderRadius: 0,
-            color: "black",
             display: "flex",
             justifyContent: "space-between",
             width: "100%",
+            color: selectedTheme == "light" ? "black" : "white",
           }}
         >
           <Typography sx={{ fontWeight: "bold", fontSize: "1.3rem" }}>

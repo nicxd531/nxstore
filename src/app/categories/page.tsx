@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Paper, Button, Typography, IconButton } from "@mui/material";
+import { Box, Paper, Button, Typography, IconButton,Divider } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -29,7 +29,7 @@ function Categories() {
           return (
             <IconButton
               key={index}
-              sx={{width:{xs:"48%",lg:"20%"},height:"150px",borderRadius:0}}
+              sx={{width:{xs:"48%",lg:"20%"},height:"200px",borderRadius:0}}
             >
               <Link href={data.link} style={{width:"100%",height:'100%'}}>
                 <Paper
@@ -45,7 +45,8 @@ function Categories() {
                     alt="category icon"
                     />
                   </Box>
-                  <Typography sx={{fontSize:"1.2rem",fontWeight:"bold"}}>{data.name}</Typography>
+                  <Divider sx={{ border: "1px solid #BDC1C8" }} />
+                  <Typography sx={{fontSize:"1.2rem",fontWeight:"bold",my:1}}>{data.name}</Typography>
                 </Paper>
               </Link>
             </IconButton>

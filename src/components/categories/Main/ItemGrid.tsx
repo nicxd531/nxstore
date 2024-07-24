@@ -11,6 +11,7 @@ import {
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Link from "next/link";
+import sendTheme from "@/zustand/sendTheme";
 
 interface items {
   image?: string;
@@ -29,6 +30,7 @@ interface myComponentProps {
 }
 
 function ItemGrid({ data }: myComponentProps) {
+  const { selectedTheme } = sendTheme();
   function calculateDiscount(price: number, discountPercent: number): number {
     if (price < 0 || discountPercent < 0 || discountPercent > 100) {
       throw new Error("Invalid price or discount percentage");
@@ -83,6 +85,7 @@ function ItemGrid({ data }: myComponentProps) {
                   width: { xs: "90%", lg: "80%" },
                   textAlign: "start",
                   height: "100%",
+                  color: selectedTheme == "light" ? "black" : "white"
                 }}
               >
                 <Stack
@@ -103,7 +106,9 @@ function ItemGrid({ data }: myComponentProps) {
                   {finalPrice !== originalPrice && (
                     <Typography
                       sx={{ fontSize: { xs: "0.9rem", lg: "1.3rem" } }}
-                      className="text-muted text-line-through"
+                      className={`${
+                        selectedTheme == "light" && "text-muted"
+                      } text-line-through`}
                     >
                       ${originalPrice}
                     </Typography>
@@ -128,7 +133,9 @@ function ItemGrid({ data }: myComponentProps) {
                 </Stack>
 
                 <Typography
-                  className="text-muted"
+                  className={`${
+                    selectedTheme == "light" && "text-muted"
+                  } `}
                   sx={{
                     fontSize: { xs: "1rem", lg: "1.3rem" },
                     fontWeight: "bold",

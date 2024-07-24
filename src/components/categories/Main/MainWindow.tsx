@@ -24,7 +24,7 @@ interface myComponentProps {
 function MainWindow({ items }: myComponentProps) {
   const { selectedGrid, selectGrid } = toggleGrid();
   return (
-    <Box sx={{ width: "100%", height: "90%", overflow: "auto" }}>
+    <Box className="custom-scrollbar" sx={{ width: "100%", height: "90%", overflow: "auto" }}>
       <Grid container spacing={2} rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, lg: 3 }}>
         {items?.map((data, index) => {
           return selectedGrid == "list" ? (

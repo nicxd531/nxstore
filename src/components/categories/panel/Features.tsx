@@ -8,6 +8,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { CSSTransition } from "react-transition-group";
 import "./HeightTransition.css";
 import Divider from "@mui/material/Divider";
+import sendTheme from "@/zustand/sendTheme";
 
 interface MyComponentProps {
   optionalStringArray?: string[];
@@ -15,16 +16,17 @@ interface MyComponentProps {
 
 function Features({ optionalStringArray }: MyComponentProps) {
   const [inProp, setInProp] = React.useState(true);
+  const { selectedTheme } = sendTheme();
 
   return (
-    <Box sx={{mb:2}}>
+    <Box sx={{ mb: 2 }}>
       <Box>
         <Divider variant="inset" sx={{ ml: 0 }} />
         <IconButton
           onClick={() => setInProp(!inProp)}
           sx={{
             borderRadius: 0,
-            color: "black",
+            color: selectedTheme == "light" ? "black" : "white",
             display: "flex",
             justifyContent: "space-between",
             width: "100%",

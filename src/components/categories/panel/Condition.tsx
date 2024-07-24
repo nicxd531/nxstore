@@ -10,22 +10,24 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import sendTheme from "@/zustand/sendTheme";
 
 interface myComponentProps {
   optionalStringArray?: string[];
 }
 function Condition({ optionalStringArray }: myComponentProps) {
+  const { selectedTheme } = sendTheme();
   const [inProp, setInProp] = React.useState(true);
 
   return (
-    <Box sx={{mb:2}}>
+    <Box sx={{ mb: 2 }}>
       <Box>
         <Divider variant="inset" sx={{ ml: 0 }} />
         <IconButton
           onClick={() => setInProp(!inProp)}
           sx={{
             borderRadius: 0,
-            color: "black",
+            color: selectedTheme == "light" ? "black" : "white",
             display: "flex",
             justifyContent: "space-between",
             width: "100%",
