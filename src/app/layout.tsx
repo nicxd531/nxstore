@@ -7,6 +7,7 @@ import { Container } from "@mui/material";
 import AppBarMain from "@/components/appBar/AppBarMain";
 import Footer from "@/components/footer/Footer";
 import NextTopLoader from 'nextjs-toploader'
+import 'rsuite/dist/rsuite.min.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
