@@ -6,6 +6,7 @@ import signUpData from "../../../zustand/auth/signUpData";
 import { motion } from "framer-motion";
 import { Controller } from "react-hook-form";
 
+
 const pageVariants = {
   active: {
     scale: 1, // Zoom in (full size)
