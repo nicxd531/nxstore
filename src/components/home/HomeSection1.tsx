@@ -2,6 +2,7 @@
 import React from "react";
 import { Paper, Box, Button, Typography, Avatar } from "@mui/material";
 import Link from "next/link";
+import HomeBtn from "./HomeBtn";
 
 function HomeSection1() {
   const [selected, setSelected] = React.useState(0);
@@ -137,38 +138,7 @@ function HomeSection1() {
           alignItems: "start",
         }}
       >
-        <Paper
-          sx={{
-            width: "100%",
-            height: "38%",
-            bgcolor: "secondary.light",
-            display: "flex",
-            flexDirection: "column",
-            p: 1,
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              mb: 2,
-              color: "black",
-            }}
-          >
-            <Avatar sx={{ mr: 2 }} />
-            <Typography
-              sx={{ width: "60%", fontSize: "1.3rem", color: "black" }}
-            >
-              Hi, user let’s get stated
-            </Typography>
-          </Box>
-          <Button variant="contained" sx={{ mb: 1, bgcolor: "secondary.main" }}>
-            <Link href="/signup">Join now</Link>
-          </Button>
-          <Button variant="contained">
-            <Link href="/login">Log in</Link>{" "}
-          </Button>
-        </Paper>
+        <HomeBtn />
         <Paper
           sx={{
             width: "100%",

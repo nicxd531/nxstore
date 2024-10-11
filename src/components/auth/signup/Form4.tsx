@@ -61,7 +61,7 @@ function Form4({ control, errors }: any) {
             name="password"
             control={control}
             render={({ field }) => (
-              <FormControl sx={{ m: 1, width: "25ch" }} variant="standard">
+              <FormControl sx={{ m: 1, width: "100%" }} variant="standard">
                 <InputLabel
                   error={errors.password}
                   htmlFor="standard-adornment-password"
@@ -103,7 +103,7 @@ function Form4({ control, errors }: any) {
             name="confirmPassword"
             control={control}
             render={({ field }) => (
-              <FormControl sx={{ m: 1, width: "25ch" }} variant="standard">
+              <FormControl sx={{ m: 1, width: "100%" }} variant="standard">
                 <InputLabel
                   error={errors.confirmPassword}
                   htmlFor="standard-adornment-password"

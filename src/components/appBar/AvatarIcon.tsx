@@ -3,26 +3,23 @@ import React from "react";
 import IconButton from "@mui/material/IconButton";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import Link from "next/link";
-import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import LogoutIcon from "@mui/icons-material/Logout";
+import { signOut } from "next-auth/react";
+import { redirect } from "next/navigation";
+import AuthBtn from "./other/AuthBtn";
+import { useSession } from "next-auth/react";
 
 function AvatarIcon() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const { data: session } = useSession();
   interface event {
     event: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   }
   const handleMenu = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   return (
-    <div>
+    <Box>
       <Box>
         <IconButton
           size="large"
@@ -30,46 +27,16 @@ function AvatarIcon() {
           aria-controls="menu-appbar"
           aria-haspopup="true"
           onClick={handleMenu}
-          sx={{ display: "flex", flexDirection: "column",padding :"5px"}}
+          sx={{ display: "flex", flexDirection: "column", padding: "5px" }}
         >
           <Avatar sx={{ width: 23, height: 23 }} />
         </IconButton>
         <Typography sx={{ display: { xs: "none", lg: "block" } }}>
-          Profile
+          {session ? "Profile" : "Client"}
         </Typography>
       </Box>
-      <Menu
-        id="menu-appbar"
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-        keepMounted
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-        sx={{ mt: 4 }}
-      >
-        <Link href="/profile">
-          <MenuItem onClick={handleClose}>
-            Dashboard
-            <Box sx={{ ml: 1 }}>
-              <AccountCircleIcon />
-            </Box>
-          </MenuItem>
-        </Link>
-        <MenuItem>
-          Logout
-          <Box sx={{ ml: 1 }}>
-            <LogoutIcon />
-          </Box>
-        </MenuItem>
-      </Menu>
-    </div>
+      <AuthBtn anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
+    </Box>
   );
 }
 

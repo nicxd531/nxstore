@@ -4,7 +4,7 @@ export const registrationSchema= z.object({
     surName: z.string().min(3,{message: "surname has to be atleast 3 characters"}),
     firstName: z.string().min(3,{message: "first name has to be atleast 3 characters"}),
     userName: z.string().min(3,{message: "user name has to be atleast 3 characters"}),
-    email: z.string().email({message: "email has to be atleast 3 characters  and in email format"}),
+    email: z.string().min(8,{message:"email has to be atleast 8 characters"}).email({message: " this is not a valid email"}),
     number:  z.string().min(10, { message: "Phone number must be at least 10 digits long." })  // Minimum length for phone number
     .max(15, { message: "Phone number must be at most 15 digits long." })   // Maximum length for phone number
     .regex(/^[0-9]+$/, { message: "Phone number can only contain digits." }),// Ensure phone number contains only digits

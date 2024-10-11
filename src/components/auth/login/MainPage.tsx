@@ -7,6 +7,9 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Form from "./Form";
 import LoadingButton from "@mui/lab/LoadingButton";
+import Link from "next/link";
+import Socials from "../Socials";
+
 
 function MainPage() {
   const [loading, setLoading] = React.useState(false);
@@ -26,7 +29,7 @@ function MainPage() {
   const onSubmit = useCallback((values: RegistrationSchemaType) => {
     handleClick()
     alert(JSON.stringify(values, null, 4));
-    console.log("hello");
+    
   }, []);
   const theme = createTheme({
     palette: {
@@ -36,14 +39,15 @@ function MainPage() {
     },
   });
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider  theme={theme}>
       <Stack
         justifyContent="center"
         alignItems="center"
         sx={{
-          width: "50%",
+          width: {xs:"100%",lg:"50%"},
           height: "100%",
           bgcolor: "#FFFFFF",
+          
         }}
       >
         <Stack
@@ -54,25 +58,25 @@ function MainPage() {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          sx={{ width: "80%", height: "80%" }}
+          sx={{ width: {xs:"95%",lg:"80%"}, height: "80%" }}
         >
           <Box>
             <Typography
               component="h2"
               sx={{
                 mb: { lg: 4 },
-                fontSize: { lg: "1.8rem" },
+                fontSize: { xs:"1.8rem",lg: "1.8rem" },
                 fontWeight: "bold",
               }}
             >
-              welcome Back
+              Welcome Back
             </Typography>
           </Box>
           <Form control={control} errors={errors} />
           <Stack
             justifyContent="center"
             alignItems="center"
-            sx={{ width: "100%", mt: { lg: 2 } }}
+            sx={{ width: "100%", mt: { xs:4,lg: 2 } }}
           >
             <LoadingButton
               onClick={() => {
@@ -92,7 +96,12 @@ function MainPage() {
             >
               <span>{loading ? "loging in .." : "Log in"}</span>
             </LoadingButton>
+
           </Stack>
+          <Typography sx={{fontSize:{lg:"1.2rem"},mt:2}}>Don&apos;t have an account? <Link style={{fontWeight:"bold"}} href="/signup">Sign up</Link> </Typography>
+          <Stack alignItems={"center"} sx={{width:{xs:"80%",lg:"100%"},mt:{xs:3}}}>
+          <Socials myString={"Log in"}/>
+            </Stack>
         </Stack>
       </Stack>
     </ThemeProvider>

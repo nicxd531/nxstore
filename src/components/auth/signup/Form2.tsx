@@ -78,7 +78,7 @@ function Form2({ control, errors }: any) {
                 id="filled-error-helper-text2"
                 label="Phone Number"
                 variant="standard"
-                type="number"
+                type="text"
                 helperText={errors.number?.message}
               />
             )}

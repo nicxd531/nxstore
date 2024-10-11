@@ -55,7 +55,7 @@ function Form1({ control, errors }: any) {
             control={control}
             render={({ field }) => (
               <TextField
-                sx={{ mt: 3 }}
+                sx={{ mt: 2 }}
                 error={errors.surName}
                 {...field}
                 id="filled-error-helper-text"

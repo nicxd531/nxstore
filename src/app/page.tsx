@@ -8,10 +8,11 @@ import HomeSection6 from "@/components/home/HomeSection6";
 import HomeSection7 from "@/components/home/HomeSection7";
 import HomeSection8 from "@/components/home/HomeSection8";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { dbConnect } from "../lib/db-connect";
 
 
 export default function Home() {
- 
+ dbConnect()
   
   return (
     <main  >
