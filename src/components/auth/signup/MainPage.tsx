@@ -17,14 +17,15 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import Socials from "../Socials";
 import Link from "next/link";
 import { RegisterHandler } from "@/client/request";
-import { errorhandler } from "@/utils/resolver";
 import { Message, useToaster } from "rsuite";
 import "rsuite/useToaster/styles/index.css";
-import { errorHandlerT, registerT, responseHandlerT } from "@/utils/types";
+import {useRouter}from "next/navigation"
+
 
 function MainPage() {
   const { currentPage, nextPage } = signUpPage();
   const [loading, setLoading] = React.useState(false);
+  const router =useRouter()
   const message = (type: any, message: string) => {
     return (
       <Message showIcon type={type} closable>
@@ -68,8 +69,6 @@ function MainPage() {
     AOS.init({ duration: 600, easing: "ease", once: false });
   });
   const onSubmit: SubmitHandler<RegistrationSchemaType> = async (values) => {
-    console.log({ values });
-    const rawData = JSON.stringify(values, null, 4);
     try {
       setLoading(true);
       const response = await RegisterHandler(values);
@@ -77,15 +76,27 @@ function MainPage() {
       if (
         response &&
         !response.hasError &&
-        "body" in response &&
-        response.body.success
+        "body" in response
       ) {
-        toaster.push(message("success", response.body.success), {
+        router.push("/login")
+        toaster.push(message("success", response.message), {
           placement: "bottomEnd",
           duration: 5000,
         });
-        alert(rawData);
         setLoading(false);
+      }else if(response.hasError && response.message){
+        setLoading(false)
+        toaster.push(message("error",  response.message), {
+          placement: "bottomEnd",
+          duration: 5000,
+        });
+      }
+      else{
+        setLoading(false)
+        toaster.push(message("error", "something went worng"), {
+          placement: "bottomEnd",
+          duration: 5000,
+        });
       }
     } catch (error) {
       toaster.push(message("error", "log in failed"), {
@@ -93,7 +104,7 @@ function MainPage() {
         duration: 5000,
       });
       console.log(error);
-      const errorType = "catch error ";
+      const errorType = "catch error 2";
       setLoading(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

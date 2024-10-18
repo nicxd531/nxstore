@@ -1,23 +1,23 @@
 import { errorHandlerT, responseHandlerT } from "./types";
 import { firstWordExtractorT } from "./types";
 import { truncateTextT } from "./types";
-import { Message, useToaster } from 'rsuite';
 
 
-export const errorhandler = ({ error, errorType }: errorHandlerT) => {
+
+export const errorHandler = ({ error, message }: errorHandlerT) => {
   const errorData = {
     hasError: true,
-    errorMessage: error,
-    errorType: errorType,
+    error: error,
+    message: message,
   };
   return errorData;
 };
 // response handler function
-export const responsehandler = ({ data, responseType }: responseHandlerT) => {
+export const responseHandler = ({ data, message }: responseHandlerT) => {
   const newData = {
     hasError: false,
     body: data,
-    responseType: responseType,
+    message: message,
   };
   return newData;
 };

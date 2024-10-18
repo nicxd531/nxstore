@@ -2,10 +2,17 @@ import React from 'react'
 import { Box, Stack } from "@mui/material";
 import Slider from "@/components/auth/Slider";
 import MainPage from "@/components/auth/login/MainPage";
+import { authOptions } from '@/lib/authOptions';
+import { getServerSession } from 'next-auth';
+import { redirect } from "next/navigation";
 
 
-function page() {
-  const images =["/images/loginImage1.jpg","/images/loginImage2.jpg", "/images/loginImage3.jpg","/images/loginImage4.jpg","/images/loginImage5.jpg","/images/loginImage6.jpg"]
+const page= async ()=> {
+  const session = await getServerSession(authOptions)
+  if(session){
+    redirect("/")
+  }
+  const images =["/nxstore/loginImage1.jpg","/nxstore/loginImage2.jpg", "/nxstore/loginImage3.jpg","/nxstore/loginImage4.jpg","/nxstore/loginImage5.jpg","/nxstore/loginImage6.jpg"]
 
   return (
     <Stack direction="row" sx={{ width: "100%",height:{xs:"80vh",lg:"110vh"} ,py:{xs:3,lg:6},px:{xs:1,lg:10},bgcolor:"#8B96A5"}}>

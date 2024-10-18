@@ -1,4 +1,4 @@
-import { errorhandler } from "@/utils/resolver";
+import { errorHandler } from "@/utils/resolver";
 import mongoose from "mongoose";
 //windows is available in browser 
 //like window we have global variable ini node emvironment 
@@ -17,11 +17,7 @@ export async function dbConnect(){
             return global.mongoose.conn;
         }else{
             console.log("initialising new mongoose connection 1");
-            // const password =process.env.MONGODB_PASSWORD
-            // const user =process.env.MONGODB_USER
-            // const conString=`mongodb+srv://nxnews-user:${password}@cluster0.ih3hi45.mongodb.net/${user}?retryWrites=true&w=majority&appName=Cluster0`
-            const conString= "mongodb://localhost:27017/nxStore"
-            const promise =mongoose.connect(conString,{
+            const promise =mongoose.connect( process.env.DATABASE_URI as string,{
                 autoIndex:true
             }).then(mongoose=>mongoose);
             console.log("initialising new mongoose connection2");
@@ -33,8 +29,8 @@ export async function dbConnect(){
 
             return await promise
         }
-    }catch(err){
-        console.log({err})
-        return errorhandler(err, 24)
+    }catch(error){
+        const message =-"failed to connect to database"
+        return errorHandler({error,message})
     }
 }

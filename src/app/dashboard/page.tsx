@@ -2,9 +2,14 @@
 import React from "react";
 import { useSession } from "next-auth/react";
 import { Stack, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 function Page() {
   const { data: session } = useSession();
+  const router =useRouter()
+  if(!session){
+    router.push("/login")
+  }
   
   return (
     <Stack>

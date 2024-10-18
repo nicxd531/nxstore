@@ -11,7 +11,7 @@ const page = async()=> {
   if(session){
     redirect("/")
   }
-  const images =[ "/images/signup1.jpg","/images/signup2.jpg", "/images/signup3.jpg","/images/signup4.jpg","/images/signup5.jpg","/images/signup6.jpg"]
+  const images =[ "/nxstore/signup1.jpg","/nxstore/signup2.jpg", "/nxstore/signup3.jpg","/nxstore/signup4.jpg","/nxstore/signup5.jpg","/nxstore/signup6.jpg"]
   return (
     <Stack direction="row" sx={{ width: "100%",height:{xs:"80vh",lg:"110vh"} ,py:{xs:3,lg:6},px:{xs:1,lg:10},bgcolor:"#8B96A5"}}>
       <MainPage />

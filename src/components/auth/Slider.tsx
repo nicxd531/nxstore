@@ -3,7 +3,8 @@ import { Carousel, RadioGroup, Radio, Divider } from "rsuite";
 import "rsuite/Carousel/styles/index.css";
 import React from "react";
 import { Box } from "@mui/material";
-import Image from "next/image";
+import Image from "../reuseables/Image";
+
 
 const RadioLabel = ({
   children,
@@ -31,16 +32,15 @@ export default function Slider({ images }: myComponentProps) {
         {images.map((data, index) => {
           return (
             <Image
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADA..."
-              placeholder="blur"
-              quality={90}
               key={index}
               alt="image"
-              width={300}
-              height={300}
-              className="image-next"
-              style={{ height: "100%", width: "100%",objectFit:"cover" }}
-              src={data}
+              path={data}
+              fill={false}
+              height="300"
+              width="300"
+              loading="lazy"
+              transformation={[{quality:100}]}
+              lqip={{active:true, quality:80}}
             />
           );
         })}
