@@ -5,12 +5,14 @@ import MainPage from "@/components/auth/login/MainPage";
 import { authOptions } from '@/lib/authOptions';
 import { getServerSession } from 'next-auth';
 import { redirect } from "next/navigation";
+import UnAuthourized from '@/components/reuseables/UnAuthourized';
 
 
 const page= async ()=> {
   const session = await getServerSession(authOptions)
   if(session){
     redirect("/")
+    return <UnAuthourized/>
   }
   const images =["/nxstore/loginImage1.jpg","/nxstore/loginImage2.jpg", "/nxstore/loginImage3.jpg","/nxstore/loginImage4.jpg","/nxstore/loginImage5.jpg","/nxstore/loginImage6.jpg"]
 

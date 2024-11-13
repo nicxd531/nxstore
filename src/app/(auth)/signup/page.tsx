@@ -1,5 +1,6 @@
 import MainPage from "@/components/auth/signup/MainPage";
 import Slider from "@/components/auth/Slider";
+import UnAuthourized from "@/components/reuseables/UnAuthourized";
 import { authOptions } from "@/lib/authOptions";
 import { Box, Stack } from "@mui/material";
 import { getServerSession } from "next-auth";
@@ -10,6 +11,7 @@ const page = async()=> {
   const session = await getServerSession(authOptions)
   if(session){
     redirect("/")
+    return <UnAuthourized/>
   }
   const images =[ "/nxstore/signup1.jpg","/nxstore/signup2.jpg", "/nxstore/signup3.jpg","/nxstore/signup4.jpg","/nxstore/signup5.jpg","/nxstore/signup6.jpg"]
   return (

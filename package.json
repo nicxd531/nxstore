@@ -21,6 +21,7 @@
     "@mui/material": "^5.16.7",
     "@mui/x-tree-view": "^7.5.1",
     "@react-spring/web": "^9.7.3",
+    "@rsuite/icons": "^1.2.0",
     "aos": "^2.3.4",
     "aws4": "^1.13.2",
     "axios": "^1.7.7",

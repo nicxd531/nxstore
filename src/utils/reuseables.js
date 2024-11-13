@@ -5,8 +5,8 @@ export const truncateText=(text, maxLength)=> {
 // first name extractor 
 export function firstWordExtractor(str) {
     // Trim any leading or trailing whitespace
-    str = str.trim();
+    str = str?.trim();
     // Split the string by spaces and return the first word
-    const firstWord = str.split(" ")[0];
+    const firstWord = str?.split(" ")[0];
     return firstWord;
   }

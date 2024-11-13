@@ -3,6 +3,9 @@ import React from "react";
 import { useSession } from "next-auth/react";
 import { Stack, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
+import SideNav from "@/components/dashboard/SideNav";
+import Main from "@/components/dashboard/Main";
+import "../../components/dashboard/dashboard.css"
 
 function Page() {
   const { data: session } = useSession();
@@ -12,15 +15,9 @@ function Page() {
   }
   
   return (
-    <Stack>
-      {session ? (
-        <span>
-          {" "}
-          {JSON.stringify(session)} <Typography>welcome back</Typography>{" "}
-        </span>
-      ) : (
-        <Typography> uour not logged in</Typography>
-      )}
+    <Stack flexDirection={"row"} sx={{mt:{lg:4},width:"100%",boxSizing:"border-box"}}>
+      <SideNav/>
+      <Main/>
     </Stack>
   );
 }
